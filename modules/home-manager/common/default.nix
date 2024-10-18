@@ -106,7 +106,7 @@ in
 
     programs.git = {
       enable = true;
-      userEmail = "kmzheng01@bvsd.org";
+      userEmail = "kevin.m.zheng@gmail.com";
       userName = user;
       extraConfig = {
         pull.rebase = false;
