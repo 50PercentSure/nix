@@ -222,7 +222,7 @@
       :space-evenly "false"
       (label
         :class "icon"
-        :text "    "
+        :text "{volume_percent}%     "
         :wrap false
       )
       (revealer
