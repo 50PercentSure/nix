@@ -24,6 +24,8 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  nixpkgs.config.allowUnfree = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -95,6 +97,17 @@
     users = {
       "fiftypercentsure" = import ./home.nix;
     };
+    backupFileExtension = "backup";
+  };
+
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  };
+
+  programs.hyprlock = {
+    enable = true;
+    package = inputs.hyprlock.packages."${pkgs.system}".hyprlock;
   };
 
   # Install firefox.
@@ -135,6 +148,8 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
-
+  system.stateVersion = "24.11"; # Did you read the comment? 
+  
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }
