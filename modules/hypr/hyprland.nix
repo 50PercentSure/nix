@@ -20,6 +20,8 @@ in
     waybar
     dunst
     networkmanagerapplet
+    bibata-cursors
+    firefox-devedition
   ];
 
   xdg.portal.enable = true;
@@ -60,6 +62,8 @@ in
       
       bind = [
         "$mod, RETURN, exec, alacritty"
+	"$mod, E, exec, firefox-devedition -P Home"
+	"$mod SHIFT, E, exec, firefox-devedition -P School"
 	"$mod, Q, killactive"
 	"$mod, F, fullscreen"
         "$mod, G, togglefloating"
