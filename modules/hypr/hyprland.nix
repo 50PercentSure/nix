@@ -2,12 +2,13 @@
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     swww init &
-    swww img ~/Wallpapers/ALLqk82.png &
+    swww img ~/Wallpapers/village.png &
 
     nm-applet --indicator &
     
     waybar &
-    dunst
+    dunst &
+    hyprctl setcursor Bibata-Modern-Classic 14
   '';
 
 in
