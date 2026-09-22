@@ -9,6 +9,7 @@
         self.nixosModules.UTMHardware
         self.nixosModules.fish
         self.nixosModules.java
+        self.nixosModules.python
       ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
